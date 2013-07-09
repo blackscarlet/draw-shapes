@@ -48,14 +48,20 @@ import java.util.ArrayList;
 	NodeList nodes = doc.getElementsByTagName("item");
 	
 	for(int i=0;i<nodes.getLength();i++) {
-
+		String temp;
 	Element element = (Element)nodes.item(i);
-	System.out.println(arrayTest.add("Title: " + getElementValue(element,"title")));
-	System.out.println(arrayTest.add("Link: " + getElementValue(element,"link")));
-	System.out.println(arrayTest.add("Publish Date: " + getElementValue(element,"pubDate")));
-	System.out.println(arrayTest.add("author: " + getElementValue(element,"dc:creator")));
-	System.out.println(arrayTest.add("comments: " + getElementValue(element,"wfw:comment")));
-	System.out.println(arrayTest.add("description: " + getElementValue(element,"description")));
+	System.out.println(temp=("Title: " + getElementValue(element,"title")));
+	arrayTest.add(temp);
+	System.out.println(temp=("Link: " + getElementValue(element,"link")));
+	arrayTest.add(temp);
+	System.out.println(temp=("Publish Date: " + getElementValue(element,"pubDate")));
+	arrayTest.add(temp);
+	System.out.println(temp=("author: " + getElementValue(element,"dc:creator")));
+	arrayTest.add(temp);
+	System.out.println(temp=("comments: " + getElementValue(element,"wfw:comment")));
+	arrayTest.add(temp);
+	System.out.println(temp=("description: " + getElementValue(element,"description")));
+	arrayTest.add(temp);
 	System.out.println();
 	}//for
 	}//try

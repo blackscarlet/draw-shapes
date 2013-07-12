@@ -28,13 +28,15 @@ public class PaintShapesMain extends JFrame
 		JButton arc = new JButton("Arc");
 		JButton invarc = new JButton("InvertedArc");
 		JButton arc2d = new JButton("Arc2D");
+		JButton angle = new JButton("Angle");
 		oval.setIcon(ovalImage);
 		BPanel.add(rect);
 		BPanel.add(oval);
 		BPanel.add(arc);
 		BPanel.add(invarc);
 		BPanel.add(arc2d);
-	
+		BPanel.add(angle);
+		
 		rect.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)
 			{
@@ -67,6 +69,13 @@ public class PaintShapesMain extends JFrame
 			public void actionPerformed(ActionEvent e)
 			{
 				panel.setType("Arc2D");
+			}
+		});
+		
+		angle.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)
+			{
+				panel.setType("Angle");
 			}
 		});
 		

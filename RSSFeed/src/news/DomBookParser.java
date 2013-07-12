@@ -16,6 +16,7 @@ public class DomBookParser {
 			Document bookDoc = build1.parse(new File(book1));
 			Element bookEle = bookDoc.getDocumentElement();
 			NodeList chapterNodes = bookEle.getChildNodes();
+			
 			for(int i=0; i<chapterNodes.getLength(); i++){
 				Element chapter = (Element) chapterNodes.item(i);
 				System.out.print("Value: " + chapter.getNodeName() + " ");
